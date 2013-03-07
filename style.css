@@ -1,0 +1,620 @@
+/*
+Theme Name: Gnorpen5
+Theme URI: http://gnorpen.com
+Description: Tema för Gnorpen.com 
+Version: 5.0
+Author: Christian Ohlsson
+Author URI: http://crille.org
+Tags: Gnorpen, gaming, responsive
+*/
+
+/* CSS RESET */
+/* ***************************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+/* *********************************************************************** */
+/* Gemensamma saker                                                        */
+
+body {
+	background-color: #f0f0f0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12pt;
+	font-weight: 300;	
+	margin: 5px;
+	line-height: 130%;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;	
+}
+a, a:visited, a:active {
+	text-decoration: none;
+	color: #06f;	
+}
+a:hover {
+	text-decoration: underline;
+}
+b, strong {
+	font-weight: bold;	
+}
+.centrerat {
+	margin: 0 auto;
+	text-align: center;
+}
+#wrapper {
+	width: 100%;
+}
+#head-container {
+	margin-bottom: 20px;
+}
+#header-placeholder {
+	color: #eee;
+}
+.head-widget {
+	text-align: right;	
+}
+
+#sidebars, #sidnavigering, .inlagg_meta, .kommentar_meta {
+	font-size: 80%;	
+}
+#logo {
+}
+#sidebars {
+	background-color: #f8f8f8;	
+	border-bottom: thin solid #808080;
+}
+#logo img {
+	width: 100%;
+	height: auto;	
+}
+#middle-container {
+	margin-right: auto;
+	margin-left: auto;
+}
+#content {
+	margin-bottom: 20px;
+	background-color: #fff;
+	box-shadow: -2px -2px 2px #ddd;
+}
+#footer {
+	clear: both;
+	background-color: #181818;
+}
+#footer-container {
+	color: #eee;
+	margin-right: auto;
+	margin-left: auto;
+	height: auto;
+	min-height: 500px;
+}
+
+/* *********************************************************************** */
+/* Sökningsrutan                                                           */
+#search-area {
+	float: right;
+}
+#searchbutton {
+	width: 32px;
+	height: 32px;
+	background-color: #eee;
+	background-image: url('ikoner/sokknapp.png');
+	background-repeat: no-repeat;
+	background-position: center center;	
+	display: table-cell;
+	vertical-align: middle;
+	border: none;
+}
+#searchbutton:hover {
+	background-color: #fff;
+}
+#s {
+	font: inherit;
+	font-style: italic;
+	color: #686868;
+	height: 32px;
+	display: table-cell;
+}
+
+/* *********************************************************************** */
+/* Sidnavigering                                                           */
+#sidnavigering {
+	width: 98.5%;
+	background-color: #333;
+	color: #eee;
+	clear: both;
+	padding: 20px 0 20px 20px;
+}
+#sidnavigering .page, #sidnavigering .pages, #sidnavigering .extend, #sidnavigering .current, #sidnavigering a{
+	color: #eee;
+	margin-right: 10px;
+}
+
+
+/* *********************************************************************** */
+/* Menyn                                                                   */
+
+nav {
+	clear: both;
+	background-color: #333;
+}
+nav li{
+	display: inline;
+	list-style: none;
+	margin: 10px 0;
+	position: relative;
+	line-height: 40px;
+}
+nav li:hover{
+	background-color: #111;
+}
+nav a, nav a:visited{
+	text-decoration: none;
+	font-weight: bold;
+	text-align: left;
+	color: #eee;
+	padding: 0px 10px;
+	margin: 0;
+	display: inline-block;
+}
+nav ul ul{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	background: #464646;
+}
+nav a:hover{
+	background-color: #111;
+	text-decoration: none;
+}
+nav li:hover > ul{
+	display: block;
+}
+nav li ul li{
+	display: block;
+	font-size: 80%;
+	width: 200px;
+}
+nav li.current_page_ancestor > a,
+nav li.current_page_parent > a,
+nav li.current_page_item > a{
+	color: #FFFFFF;
+}
+nav div { 
+	display: none; 
+}
+nav select { 
+	display: inline-block; 
+}
+
+
+/* ========================================================== */
+/*         Widget                                             */
+/* ========================================================== */
+#sidebar1 {
+
+}
+#sidebar2 {
+
+}
+.head-widget {
+	color: #111;	
+}
+.footer-widget {
+	margin: 20px;	
+}
+#sidebar ul{
+	margin-left: 10px;
+}
+
+#sidebar li{
+	list-style-type: none;
+}
+.sidebar-widget {
+	border: 1px solid #b0b0b0;
+	margin-bottom: 30px;
+	padding: 0;
+	word-wrap:break-word;
+}
+.sidebar-widget h3 {
+	text-align: center;
+	font-size: 14pt;
+	background-color: #333;
+	color: #eee;
+	font-size: 120%;
+}
+.sidebar-widget ul {
+	margin: 10px 0;
+}
+.sidebar-widget li {
+	display: block;
+}
+.sidebar-widget a, a:active {
+
+}
+.sidebar-widget a:visited {
+
+}
+
+.sidebar-widget a:hover {
+
+}
+.tweet .who img {
+	float: left;
+	margin: 4px;
+}
+.tweet .time {
+	margin-bottom: 20px;
+	display: block;
+	font-size: 80%;
+}
+.tweet {
+	line-height: normal;
+}
+.tweet ul li{
+	padding: 0;
+}
+
+.sidebar-widget ul {
+	padding-left: 10px;	
+}
+#senaste_nyheterna b {
+	margin-bottom: 30px;	
+}
+
+/* ========================================================== */
+/*         INLÄGG STYLE DEFINITIONS                           */
+/* ========================================================== */
+.inlagg {
+	clear: both;
+	margin: 0 10px 10px 0;
+	border-top: 7px solid #09f;
+	margin-top: 250px;
+}
+.inlagg:first-child {
+	border: none;
+	margin-top: 0px;
+}
+.inlagg_bild {
+	margin: 5px;
+	float: left;
+	padding-right: 10px;
+}
+.inlagg_rubrik {
+	margin-top: 10px;
+	font-size: 130%;
+}
+.inlagg_meta {
+	width: 80%;
+}
+.inlagg_texten {
+	clear: both;
+	border-top: 1px dotted #bbb;
+	padding-top: 20px;
+	margin-left: 5px;
+}
+.inlagg_texten p {
+	margin-bottom: 15px;
+}
+.inlagg_texten img {
+	max-width: 100% !important;
+	height: auto;
+}
+.bild_maxad {
+	width: 100%; 
+}
+.inlagg_texten ul {
+	margin-left: 40px;
+	margin-bottom: 30px;
+}
+.inlagg_texten li {
+	list-style-image: url('ikoner/bullet.png');	
+}
+.inlagg_texten p img, .inlagg_texten p .fluid-width-video-wrapper{
+	padding-top: 30px;
+}
+.inlagg a {
+	border-bottom: thin dotted 09f;
+}
+.inlagg a:hover {
+
+}
+
+/* ========================================================== */
+/*         COMMENTS SECTION                                   */
+/* ========================================================== */
+.kommentarer {
+	float: right;
+	width: 80%;
+	margin-right: 10px;
+}
+.kommentar {
+	border: 1px solid #b0b0b0;
+	float: right;
+	padding: 5px;
+	clear: both;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.kommentar_bild {
+	float: left;
+	margin-right: 10px;
+	margin-top:3px;
+	margin-left: 3px;
+}
+.kommentar_text p, .tweet {
+	display: inline;
+}
+.kommentar_text, .gnrp-comment {
+	word-wrap:break-word;
+}
+.kommentar_svar {
+	margin-bottom: 50px;
+	width: 100%;
+}
+.kommentars_ruta {
+	border: 1px solid #f00;
+	height: 50px;
+	width: 100%;
+	float: right;
+	font: inherit;
+	color: #686868;
+	font-style: italic;
+}
+.kommentar_svar INPUT{ 
+	font-weight: bold;
+	color: #000;
+	float: right;
+	margin-bottom: 200px;
+}
+
+.form-submit .submit, SELECT {
+	font: 12pt 'Open Sans', Verdana, sans-serif;
+	border: thin solid #111;
+	background-color: #464646;
+	color: #eee;
+}
+.form-submit .submit:hover {
+	background-color: #111;
+}
+
+
+/* ========================================================== */
+/*         MEDLEM-STUFF GOES HERE                             */
+/* ========================================================== */
+.medlem {
+	margin-bottom: 5px;
+	clear: both;
+	display: block;
+}
+.medlem_bild {
+	float: left;
+	margin-right: 5px;
+	margin-left: 10px;
+}
+.medlem a {
+	font-weight: bold;	
+}
+/* ========================================================== */
+/*         USERINFO                                           */
+/* ========================================================== */
+#userinfo p {
+	margin: 20px 0;
+}
+
+#userinfo strong {
+	font-weight: bold;
+}
+#userinfo {
+		padding: 10px;	
+}
+#userinfo_text {
+	width: 70%;
+	float: left;
+}
+
+#userinfo_bild {
+	width: 29%;
+	float: right;
+}
+#userinfo_bild img {
+	width: 100%;
+	height: auto;
+}
+#user-poster {
+	clear: both;
+	padding: 50px 0;
+	margin-left: 10px;	
+}
+/* ================================================================= */
+/* Layoutregler för äldre telefoner och små enheter                  */
+@media screen and (min-width: 350px) 
+{
+	#sidnavigering {
+		display:none;	
+	}
+	#sidebars {
+		width: 100%;
+		border-bottom: none;
+		clear: both;
+	}
+	#sidebar2 {
+		width: 100%;	
+	}
+	#sidebar1 {
+		width: 100%;	
+	}
+	#footer-container {
+		width: 100%;
+	}
+	#footers-1 {
+		width: 100%;
+	}
+	#footers-2 {
+		width: 100%;
+	}
+}
+
+/* ================================================================= */
+/* Regler för mindre telefoner i vertikalt visningsläge              */
+@media screen and (min-width: 500px) 
+{
+	#content {
+		clear: none;	
+	}
+	
+	#sidnavigering {
+		display:block;
+		max-width: 100% !important;
+	}
+	#sidebars {
+		width: 100%;
+		border-bottom: none;
+		clear: none;	
+	}
+	#sidebar2 {
+		width: 50%;	
+		float: left;
+	}
+	#sidebar1 {
+		width: 50%;	
+		float: right;
+	}
+	#footer-container {
+		width: 100%;
+	}
+	#footers-1 {
+		width: 50%;
+		float: left;
+	}
+	#footers-2 {
+		width: 50%;
+		float: right;
+	}
+}
+
+/* ================================================================= */
+/* För surfplattor och telefoner i horisontellt läge                 */
+@media screen and (min-width: 600px) 
+{
+	nav div     { display: inline-block; }
+	nav select { display: none; }
+	nav li {font-size: 80%;}
+	#header-placeholder {
+		width: 100%;
+	}
+	#logo {
+		width: 60%;
+		float: left;
+	}	
+	#sidebar-head {
+		width: 40%;
+		float: right;
+	}
+	#footer-container {
+		width: 100%;
+	}	
+	#footers-1 {
+		width: 50%;
+		float: left;
+	}
+	#footers-2 {
+		width: 50%;
+		float: right;
+	}
+	#footer-area1 {
+		width: 50%;
+		float: left;
+	}
+	#footer-area2 {
+		width: 50%;
+		float: right;
+	}
+	#footer-area3 {
+		width: 50%;
+		float: left;
+	}
+	#footer-area4 {
+		width: 50%;
+		float: right;
+	}
+}
+/* ================================================================= */
+/* För mindre desktops och laptops                                   */
+@media screen and (min-width: 850px) 
+{
+	nav li {font-size: 100%;}
+
+	nav, #footer-container, #header-placeholder, #middle-container {
+		max-width: 1400px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#content {
+		width: 69%;
+		float: left;
+		border-right: thin solid #808080;
+	}
+	#sidebars {
+		width: 30%;	
+		float: right;
+	}
+	#sidebar2 {
+		width: 100%;	
+	}
+	#sidebar1 {
+		width: 100%;	
+	}
+}
+
+/* ================================================================= */
+/* För stora desktops och laptops med större skärmar                 */
+@media screen and (min-width: 1200px) 
+{
+
+	#content {
+		width: 59.9%;
+		float: left;
+		border-right: thin solid #808080;
+	}
+	#sidebars {
+		width: 40%;	
+		float: right;
+	}
+	#sidebar2 {
+		width: 49%;
+		float: left;
+	}
+	#sidebar1 {
+		width: 49%;
+		float: right;
+	}
+}
